@@ -1,0 +1,13 @@
+*.java text eol=crlf
+*.properties text eol=crlf
+*.gradle text eol=crlf
+*.xml    text eol=crlf
+*.c    text eol=crlf
+*.cpp    text eol=crlf
+*.h    text eol=crlf
+*.hpp    text eol=crlf
+
+*.png binary
+*.gif binary
+*.jpg binary
+*.jpeg binary
