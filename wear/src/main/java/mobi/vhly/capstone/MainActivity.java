@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.wearable.view.WatchViewStub;
 import android.widget.TextView;
+import mobi.vhly.capstone.commonlib.MyLog;
 
 public class MainActivity extends Activity {
 
@@ -20,5 +21,7 @@ public class MainActivity extends Activity {
                 mTextView = (TextView) stub.findViewById(R.id.text);
             }
         });
+
+        MyLog.d("MainActivity", "Start process");
     }
 }
