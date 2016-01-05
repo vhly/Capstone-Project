@@ -12,12 +12,12 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(vhly.mobi.capstone.R.layout.activity_main);
-        final WatchViewStub stub = (WatchViewStub) findViewById(vhly.mobi.capstone.R.id.watch_view_stub);
+        setContentView(R.layout.activity_main);
+        final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
-                mTextView = (TextView) stub.findViewById(vhly.mobi.capstone.R.id.text);
+                mTextView = (TextView) stub.findViewById(R.id.text);
             }
         });
     }
