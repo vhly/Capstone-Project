@@ -1,0 +1,38 @@
+# IntelliJ IDEA Project files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Gradle build
+build/
+.gradle/
+
+# Eclipse project files
+.project
+.classpath
+.settings/
+
+# Android auto gen
+bin/
+gen/
+local.properties
+default.properties
+
+# OS auto gen folder information
+.DS_Store
+Thumbs.db
+
+# JNI compile files
+*.d
+*.d.o
+
+# Temp files
+*.temp
+*.tmp
+*.bak
+*.swp
+*.vpp~*
+*.*~
+~*.*
