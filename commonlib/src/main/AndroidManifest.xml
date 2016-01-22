@@ -2,6 +2,8 @@
           package="vhly.mobi.capstone.commonlib"
         >
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
     <application
             android:allowBackup="true"
             >
