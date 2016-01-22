@@ -27,12 +27,15 @@ public final class CryptUtil {
     public static final String ALG_AES = "AES";
     public static final String ALG_DES = "DES";
     public static final String ALG_RSA = "RSA";
+    public static final String ALG_MD5 = "MD5";
+    public static final String ALG_SHA1 = "SHA1";
 
     public static final int KEY_SIZE_AES = 16;
     public static final int KEY_SIZE_DES = 8;
     public static final int KEY_SIZE_RSA_MIN = 1024;
 
     private static final SecureRandom SECURE_RANDOM = new SecureRandom();
+
 
     private CryptUtil() {
 
@@ -104,7 +107,7 @@ public final class CryptUtil {
     ///////////////////////////
     // MessageDigest
 
-    public static String md5(String content, String charset) {
+    public static String md5Hex(String content, String charset) {
         String ret = null;
         if (content != null) {
             if (charset == null) {
@@ -116,28 +119,44 @@ public final class CryptUtil {
             } catch (UnsupportedEncodingException e) {
                 data = content.getBytes();
             }
-            ret = md5(data);
+            ret = md5Hex(data);
         }
         return ret;
     }
 
-    public static String md5(byte[] data) {
+    public static String md5Hex(byte[] data) {
         String ret = null;
         if (data != null && data.length > 0) {
-            data = digest(data, "MD5");
+            ret = toHex(md5(data));
+        }
+        return ret;
+    }
+
+    public static String sha1Hex(byte[] data) {
+        String ret = null;
+        if (data != null && data.length > 0) {
+            ret = toHex(sha1(data));
+        }
+        return ret;
+    }
+
+    public static byte[] md5(byte[] data) {
+        byte[] ret = null;
+        if (data != null && data.length > 0) {
+            data = digest(data, ALG_MD5);
             if (data != null) {
-                ret = toHex(data);
+                ret = data;
             }
         }
         return ret;
     }
 
-    public static String sha1(byte[] data) {
-        String ret = null;
+    public static byte[] sha1(byte[] data) {
+        byte[] ret = null;
         if (data != null && data.length > 0) {
-            data = digest(data, "SHA1");
+            data = digest(data, ALG_SHA1);
             if (data != null) {
-                ret = toHex(data);
+                ret = data;
             }
         }
         return ret;

@@ -27,24 +27,15 @@ public class AesPreferencesObfuscator implements PreferencesObfuscator {
             throw new IllegalArgumentException("context must be set");
         }
 
-        if (password == null || password.length != 16) {
-            throw new IllegalArgumentException("password is bad");
+        if (password == null) {
+            throw new IllegalArgumentException("password must be set");
         }
 
-        mPassword = password;
+        mPassword = CryptUtil.md5(password); // for 16 bytes
 
         String serial = DeviceUtil.getDeviceId(context);
-        int len = serial.length();
-        if (len > 16) {
-            serial = serial.substring(0, 16);
-        } else {
-            int cc = 16 - len;
-            for (int i = 0; i < cc; i++) {
-                serial += "A";
-            }
-        }
 
-        mIvData = serial.getBytes();
+        mIvData = CryptUtil.md5(serial.getBytes()); // for 16 bytes
     }
 
     @Override

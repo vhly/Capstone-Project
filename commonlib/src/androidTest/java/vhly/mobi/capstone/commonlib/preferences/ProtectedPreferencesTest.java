@@ -22,11 +22,13 @@ public class ProtectedPreferencesTest extends AndroidTestCase {
     protected void setUp() throws Exception {
         super.setUp();
         mSharedPreferences = mContext.getSharedPreferences("test", Context.MODE_PRIVATE);
+        mSharedPreferences.edit().clear().commit();
         mPassword = "AAAAAAAAAAAAAAAA".getBytes();
     }
 
     @Override
     protected void tearDown() throws Exception {
+        mSharedPreferences.edit().clear().commit();
         mSharedPreferences = null;
         mPassword = null;
         super.tearDown();
