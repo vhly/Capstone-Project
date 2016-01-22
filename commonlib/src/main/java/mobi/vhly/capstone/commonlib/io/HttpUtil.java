@@ -1,11 +1,4 @@
-package mobi.vhly.capstone.commonlib;
-
-import android.Manifest;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.Binder;
+package mobi.vhly.capstone.commonlib.io;
 
 import java.io.IOException;
 import java.io.InputStream;

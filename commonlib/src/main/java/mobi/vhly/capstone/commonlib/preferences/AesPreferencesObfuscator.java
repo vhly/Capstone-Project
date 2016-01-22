@@ -2,8 +2,8 @@ package mobi.vhly.capstone.commonlib.preferences;
 
 import android.content.Context;
 import android.util.Base64;
-import mobi.vhly.capstone.commonlib.CryptUtil;
 import mobi.vhly.capstone.commonlib.DeviceUtil;
+import mobi.vhly.capstone.commonlib.crypto.CryptUtil;
 
 /**
  * Created with IntelliJ IDEA.
@@ -36,6 +36,12 @@ public class AesPreferencesObfuscator implements PreferencesObfuscator {
         init(packageName.getBytes(), deviceId.getBytes());
     }
 
+    /**
+     * Create Obfuscator with password
+     *
+     * @param context  Context
+     * @param password byte[] password must not be null
+     */
     public AesPreferencesObfuscator(Context context, byte[] password) {
 
         if (context == null) {

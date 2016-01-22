@@ -1,5 +1,6 @@
 package mobi.vhly.capstone.commonlib.preferences;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 
@@ -11,9 +12,31 @@ import android.os.Build;
  */
 public class ProtectedPreferences {
 
+    /**
+     * Create a ProtectedPreferences with AES crypto alg and
+     * use application package as password and device id as iv parameter;
+     *
+     * @param context Context for SharedPreferences and Obfuscator
+     * @param name SharedPreferences name
+     * @return ProtectedPreferences
+     */
+    public static ProtectedPreferences createDefaultPreferences(Context context, String name) {
+
+        ProtectedPreferences ret = null;
+
+        if (context != null && name != null) {
+            SharedPreferences sp = context.getSharedPreferences(name, Context.MODE_PRIVATE);
+            PreferencesObfuscator obfuscator = new AesPreferencesObfuscator(context);
+            ret = new ProtectedPreferences(sp, obfuscator);
+        }
+
+        return ret;
+    }
+
     private SharedPreferences mSharedPreferences;
 
     private PreferencesObfuscator mObfuscator;
+
 
     public ProtectedPreferences(
             SharedPreferences sharedPreferences,

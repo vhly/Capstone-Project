@@ -1,4 +1,4 @@
-package mobi.vhly.capstone.commonlib;
+package mobi.vhly.capstone.commonlib.log;
 
 import android.util.Log;
 import vhly.mobi.capstone.commonlib.BuildConfig;

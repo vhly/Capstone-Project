@@ -1,4 +1,4 @@
-package mobi.vhly.capstone.commonlib;
+package mobi.vhly.capstone.commonlib.io;
 
 import java.io.*;
 import java.net.HttpURLConnection;

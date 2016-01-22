@@ -9,6 +9,7 @@ import android.os.Binder;
 import android.os.Build;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
+import mobi.vhly.capstone.commonlib.log.MyLog;
 
 /**
  * Created with IntelliJ IDEA.

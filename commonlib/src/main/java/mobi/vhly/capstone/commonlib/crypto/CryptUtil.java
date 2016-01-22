@@ -1,4 +1,4 @@
-package mobi.vhly.capstone.commonlib;
+package mobi.vhly.capstone.commonlib.crypto;
 
 /**
  * Created with IntelliJ IDEA.
@@ -403,7 +403,11 @@ public final class CryptUtil {
                     // 2. 生成 SecretKeySpec 密钥
                     SecretKeySpec key = new SecretKeySpec(password, ALG_AES);
 
-                    // 3. 准备 Iv 参数，相当于形成了第二套密码
+                    // 3. 准备 Iv 参数，这个参数会在第一个数据块加密的时候,实现 "数据 + 密码 + Iv" 进行加密
+                    //    生成第一个数据块的密文,然后用密文 与 第下一个数据块 进行加密
+                    //    实现 "上一个密文 + 当前数据块 + 密码" 实现加密,生成当前密文,当前密文还会用在下一次加密
+                    //    这种方式就是  AES/CBC 模式; 因此 即使密码相同, Iv 不同, 那么加密结果也是不同的
+                    //    因此 也称 Iv 为 第二个密码
                     IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
 
                     // 4. 初始化 Cipher
