@@ -54,45 +54,6 @@ public final class HttpUtil {
 
     }
 
-    public static boolean isConnectionAlive(Context context) {
-        boolean bret = false;
-        if (context != null) {
-
-            int callingPid = Binder.getCallingPid();
-            int callingUid = Binder.getCallingUid();
-
-            // 监测 网络状态权限
-            int permission = context.checkPermission(
-                    Manifest.permission.ACCESS_NETWORK_STATE,
-                    callingPid,
-                    callingUid
-            );
-
-            // 请求 联网权限
-            int internetPermission = context.checkPermission(
-                    Manifest.permission.INTERNET,
-                    callingPid,
-                    callingUid
-            );
-
-            if (permission == PackageManager.PERMISSION_GRANTED
-                    && internetPermission == PackageManager.PERMISSION_GRANTED) {
-                ConnectivityManager manager =
-                        (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-                NetworkInfo networkInfo = manager.getActiveNetworkInfo();
-                if (networkInfo != null) {
-                    if (networkInfo.isAvailable() && networkInfo.isConnected()) {
-                        bret = true;
-                    }
-                }
-            } else {
-                MyLog.e("HttpUtil", "Need ACCESS_NETWORK_STATE & INTERNET Permission!");
-            }
-
-        }
-        return bret;
-    }
-
     private static byte[] process(HttpMethod method, String url, HashMap<String, String> headers, byte[] data) {
         byte[] ret = null;
         if (url != null) {

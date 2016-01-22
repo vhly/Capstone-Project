@@ -13,9 +13,7 @@ public class DeviceUtilTest extends AndroidTestCase {
 
     public void testGetDeviceId(){
         String deviceId = DeviceUtil.getDeviceId(mContext);
-
         assertNotNull(deviceId);
-
     }
 
 }

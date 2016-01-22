@@ -21,6 +21,21 @@ public class AesPreferencesObfuscator implements PreferencesObfuscator {
 
     private byte[] mIvData;
 
+    /**
+     * Use application package for password, and serial with iv;
+     *
+     * @param context
+     */
+    public AesPreferencesObfuscator(Context context) {
+        if (context == null) {
+            throw new IllegalArgumentException("context must be set");
+        }
+        String packageName = context.getPackageName();
+        String deviceId = DeviceUtil.getDeviceId(context);
+
+        init(packageName.getBytes(), deviceId.getBytes());
+    }
+
     public AesPreferencesObfuscator(Context context, byte[] password) {
 
         if (context == null) {
@@ -31,11 +46,14 @@ public class AesPreferencesObfuscator implements PreferencesObfuscator {
             throw new IllegalArgumentException("password must be set");
         }
 
+        String deviceId = DeviceUtil.getDeviceId(context);
+
+        init(password, deviceId.getBytes());
+    }
+
+    private void init(byte[] password, byte[] serial) {
         mPassword = CryptUtil.md5(password); // for 16 bytes
-
-        String serial = DeviceUtil.getDeviceId(context);
-
-        mIvData = CryptUtil.md5(serial.getBytes()); // for 16 bytes
+        mIvData = CryptUtil.md5(serial); // for 16 bytes
     }
 
     @Override

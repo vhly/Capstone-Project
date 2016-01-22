@@ -43,4 +43,21 @@ public class AesPreferencesObfuscatorTest extends AndroidTestCase {
 
     }
 
+    public void testSingleConstructor(){
+        AesPreferencesObfuscator obfuscator = new AesPreferencesObfuscator(mContext);
+
+        String origString = "Hello World";
+
+        String string = obfuscator.obfuscateString(origString);
+
+        assertNotNull(string);
+
+        String s = obfuscator.unobfuscateString(string);
+
+        assertNotNull(s);
+
+        assertEquals(origString, s);
+
+    }
+
 }
