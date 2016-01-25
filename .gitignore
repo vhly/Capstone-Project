@@ -1,3 +1,8 @@
+# Project configuration file for myself
+
+api_key.properties
+
+
 # IntelliJ IDEA Project files
 .idea/
 *.iml

@@ -1,0 +1,15 @@
+{
+  "regions": {
+    "tw": "https://tw.api.battle.net/",
+    "us": "https://us.api.battle.net/",
+    "eu": "https://eu.api.battle.net/",
+    "kr": "https://kr.api.battle.net/",
+    "cn": "https://api.battlenet.com.cn/"
+  },
+  "games": {
+    "d3": "Diablo III",
+    "wow": "World of Warcraft",
+    "sc2": "StarCraft II"
+  },
+  "icon_api": "http://media.blizzard.com/%s/icons/%s/%s/%s.png"
+}

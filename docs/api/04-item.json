@@ -1,0 +1,158 @@
+{
+  "id": "Unique_Helm_Set_07_x1",
+  "name": "掠奪者的面容",
+  "icon": "unique_helm_set_07_x1_demonhunter_male",
+  "displayColor": "green",
+  "tooltipParams": "item/marauders-visage",
+  "requiredLevel": 70,
+  "itemLevel": 70,
+  "stackSizeMax": 0,
+  "bonusAffixes": 4,
+  "bonusAffixesMax": 4,
+  "accountBound": true,
+  "flavorText": "「將我們自身的憤怒，惡魔的暴怒和野獸的躁怒，都化為力量。我們也從此成為毀滅的化身。」 —獵人維拉馬克",
+  "typeName": "套裝頭盔",
+  "type": {
+    "twoHanded": false,
+    "id": "Helm_DemonHunter"
+  },
+  "damageRange": "0–0 點傷害",
+  "armor": {
+    "min": 660.0,
+    "max": 759.0
+  },
+  "slots": ["head"],
+  "attributes": {
+    "primary": [{
+      "text": "+626–750 敏捷",
+      "color": "blue",
+      "affixType": "default"
+    }],
+    "secondary": [],
+    "passive": []
+  },
+  "attributesRaw": {
+    "Sockets": {
+      "min": 1.0,
+      "max": 1.0
+    },
+    "Armor_Item": {
+      "min": 660.0,
+      "max": 759.0
+    },
+    "Dexterity_Item": {
+      "min": 626.0,
+      "max": 750.0
+    },
+    "Durability_Max": {
+      "min": 500.0,
+      "max": 1000.0
+    },
+    "Durability_Cur": {
+      "min": 500.0,
+      "max": 1000.0
+    }
+  },
+  "randomAffixes": [],
+  "gems": [],
+  "socketEffects": [],
+  "set": {
+    "name": "掠奪者的化身",
+    "items": [{
+      "id": "Unique_Pants_Set_07_x1",
+      "name": "掠奪者的偽裝",
+      "icon": "unique_pants_set_07_x1_demonhunter_male",
+      "displayColor": "green",
+      "tooltipParams": "item/marauders-encasement"
+    }, {
+      "id": "Unique_Gloves_Set_07_x1",
+      "name": "掠奪者的手套",
+      "icon": "unique_gloves_set_07_x1_demonhunter_male",
+      "displayColor": "green",
+      "tooltipParams": "item/marauders-gloves"
+    }, {
+      "id": "Unique_Shoulder_Set_07_x1",
+      "name": "掠奪者的脊肩",
+      "icon": "unique_shoulder_set_07_x1_demonhunter_male",
+      "displayColor": "green",
+      "tooltipParams": "item/marauders-spines"
+    }, {
+      "id": "Unique_Boots_Set_07_x1",
+      "name": "掠奪者的足靴",
+      "icon": "unique_boots_set_07_x1_demonhunter_male",
+      "displayColor": "green",
+      "tooltipParams": "item/marauders-treads"
+    }, {
+      "id": "Unique_Chest_Set_07_x1",
+      "name": "掠奪者的軀殼",
+      "icon": "unique_chest_set_07_x1_demonhunter_male",
+      "displayColor": "green",
+      "tooltipParams": "item/marauders-carapace"
+    }, {
+      "id": "Unique_Helm_Set_07_x1",
+      "name": "掠奪者的面容",
+      "icon": "unique_helm_set_07_x1_demonhunter_male",
+      "displayColor": "green",
+      "tooltipParams": "item/marauders-visage"
+    }],
+    "slug": "embodiment-of-the-marauder",
+    "ranks": [{
+      "required": 2,
+      "attributes": {
+        "primary": [],
+        "secondary": [],
+        "passive": [{
+          "text": "你可以同時召喚所有戰寵",
+          "color": "orange",
+          "affixType": "default"
+        }]
+      },
+      "attributesRaw": {
+        "Item_Power_Passive#ItemPassive_Unique_Ring_716_x1": {
+          "min": 1.0,
+          "max": 1.0
+        }
+      }
+    }, {
+      "required": 4,
+      "attributes": {
+        "primary": [],
+        "secondary": [],
+        "passive": [{
+          "text": "衛哨的傷害提高 300%，並且會同步施放你所使用的元素箭、戰輪、刺穿、多重射擊和集束箭",
+          "color": "orange",
+          "affixType": "default"
+        }]
+      },
+      "attributesRaw": {
+        "Item_Power_Passive#ItemPassive_Unique_Ring_717_x1": {
+          "min": 3.0,
+          "max": 3.0
+        }
+      }
+    }, {
+      "required": 6,
+      "attributes": {
+        "primary": [],
+        "secondary": [],
+        "passive": [{
+          "text": "每啟動一個衛哨，你的主要技能、元素箭、戰輪、刺穿、多重射擊、集束箭、戰寵和復仇心切造成的傷害提高 600%",
+          "color": "orange",
+          "affixType": "default"
+        }]
+      },
+      "attributesRaw": {
+        "Item_Power_Passive#ItemPassive_Unique_Ring_650_x1": {
+          "min": 6.0,
+          "max": 6.0
+        }
+      }
+    }]
+  },
+  "setItemsEquipped": ["Unique_Helm_Set_07_x1"],
+  "craftedBy": [],
+  "seasonRequiredToDrop": -1,
+  "isSeasonRequiredToDrop": false,
+  "description": null,
+  "blockChance": "+0.0% 格擋機率"
+}
