@@ -16,7 +16,12 @@ import java.io.*;
  * Date: 16/1/22
  * Email: vhly@163.com
  */
-public class FileCache {
+
+/**
+ * FileCache need createInstance with context and when application shutdown please
+ * invoke destroy() method.
+ */
+public final class FileCache {
     private static FileCache ourInstance;
 
     public static FileCache createInstance(Context context) {
@@ -48,7 +53,6 @@ public class FileCache {
     private BroadcastReceiver mExternalChangeReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
             mCacheDir = null;
             mCacheDir = getCacheDir();
         }
