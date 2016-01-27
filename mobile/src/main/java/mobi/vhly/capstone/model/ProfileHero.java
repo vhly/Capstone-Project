@@ -32,7 +32,7 @@ public class ProfileHero implements JsonModel {
     private String mHeroClass;
     private int mGender;
     private int mLevel;
-    private int paragonLevel;
+    private int mParagonLevel;
     private boolean hardcore;
     private boolean seasonal;
     private long lastUpdated;
@@ -47,7 +47,7 @@ public class ProfileHero implements JsonModel {
             mHeroClass = json.getString("class");
             mGender = json.getInt("gender");
             mLevel = json.getInt("level");
-            paragonLevel = json.getInt("paragonLevel");
+            mParagonLevel = json.getInt("paragonLevel");
             hardcore = json.getBoolean("hardcore");
             seasonal = json.getBoolean("seasonal");
             lastUpdated = json.getLong("last-updated");
@@ -61,5 +61,21 @@ public class ProfileHero implements JsonModel {
 
     public String getName() {
         return mName;
+    }
+
+    public String getHeroClass() {
+        return mHeroClass;
+    }
+
+    public int getGender() {
+        return mGender;
+    }
+
+    public int getLevel() {
+        return mLevel;
+    }
+
+    public int getParagonLevel() {
+        return mParagonLevel;
     }
 }

@@ -5,6 +5,8 @@
 
 http://media.blizzard.com/d3/icons/\<type\>/\<size\>/\<icon\>.png
 
+http://media.blizzard.com/d3/icons/portraits/42/demonhunter_female.png
+
 ### type parameter
 
 ```

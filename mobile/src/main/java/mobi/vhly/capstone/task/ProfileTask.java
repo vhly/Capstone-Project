@@ -28,13 +28,6 @@ public class ProfileTask extends BaseTask {
             if (object != null) {
                 ret.state = 1;
                 ret.data = object;
-                MyLog.d("ProfileTask", "getData ok will sleep");
-                try {
-                    Thread.sleep(15000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                MyLog.d("ProfileTask", "sleep finish");
             }
         }
         return ret;

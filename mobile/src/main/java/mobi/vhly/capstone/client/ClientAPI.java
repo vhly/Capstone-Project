@@ -39,7 +39,27 @@ public final class ClientAPI {
 
     }
 
-    public static String getAuthorizeUrl(){
+    public static String getD3HeroIconUrl(String size, String icon){
+        return getIconUrl("d3", "portraits", size, icon);
+    }
+
+    public static String getIconUrl(String gameType, String type, String size, String icon) {
+        String ret = null;
+        if (type != null && size != null && icon != null) {
+
+            ret = String.format(
+                    GameConfiguration.sIconApiPoint,
+                    gameType,
+                    type,
+                    size,
+                    icon
+            );
+
+        }
+        return ret;
+    }
+
+    public static String getAuthorizeUrl() {
         // https://<region>.battle.net/oauth/authorize
         String ret = null;
         StringBuilder sb = new StringBuilder(GameConfiguration.sCurrentAuthorizeApiPoint);
