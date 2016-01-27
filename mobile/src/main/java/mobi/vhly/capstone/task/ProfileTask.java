@@ -1,6 +1,7 @@
 package mobi.vhly.capstone.task;
 
 import mobi.vhly.capstone.client.ClientAPI;
+import mobi.vhly.capstone.log.MyLog;
 import mobi.vhly.capstone.commonlib.task.BaseTask;
 import mobi.vhly.capstone.commonlib.task.TaskCallback;
 import mobi.vhly.capstone.commonlib.task.TaskResult;
@@ -27,6 +28,13 @@ public class ProfileTask extends BaseTask {
             if (object != null) {
                 ret.state = 1;
                 ret.data = object;
+                MyLog.d("ProfileTask", "getData ok will sleep");
+                try {
+                    Thread.sleep(15000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                MyLog.d("ProfileTask", "sleep finish");
             }
         }
         return ret;

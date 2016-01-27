@@ -1,7 +1,7 @@
-package mobi.vhly.capstone.commonlib.log;
+package mobi.vhly.capstone.log;
 
 import android.util.Log;
-import vhly.mobi.capstone.commonlib.BuildConfig;
+import mobi.vhly.capstone.BuildConfig;
 
 /**
  * Created with IntelliJ IDEA.

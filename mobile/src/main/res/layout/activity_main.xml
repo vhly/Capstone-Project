@@ -16,4 +16,11 @@
             android:text="Authorize"
             />
 
+    <ListView
+            android:id="@+id/list_hero"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
 </LinearLayout>

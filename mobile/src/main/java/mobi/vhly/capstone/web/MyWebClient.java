@@ -2,7 +2,7 @@ package mobi.vhly.capstone.web;
 
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import mobi.vhly.capstone.commonlib.log.MyLog;
+import mobi.vhly.capstone.log.MyLog;
 
 /**
  * Created with IntelliJ IDEA.

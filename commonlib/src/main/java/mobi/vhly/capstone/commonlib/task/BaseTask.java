@@ -2,6 +2,8 @@ package mobi.vhly.capstone.commonlib.task;
 
 import android.os.AsyncTask;
 
+import java.lang.ref.WeakReference;
+
 /**
  * Created with IntelliJ IDEA.
  * User: vhly[FR]
@@ -14,23 +16,31 @@ import android.os.AsyncTask;
  */
 public abstract class BaseTask extends AsyncTask<String, Integer, TaskResult> {
 
-    private TaskCallback mCallback;
+    private WeakReference<TaskCallback> mCallbackReference;
 
     public BaseTask(TaskCallback callback) {
-        mCallback = callback;
+        if (callback != null) {
+            mCallbackReference = new WeakReference<TaskCallback>(callback);
+        }
     }
 
     @Override
     protected void onPreExecute() {
-        if (mCallback != null) {
-            mCallback.taskStart();
+        if (mCallbackReference != null) {
+            TaskCallback callback = mCallbackReference.get();
+            if (callback != null) {
+                callback.taskStart();
+            }
         }
     }
 
     @Override
     protected void onPostExecute(TaskResult result) {
-        if (mCallback != null) {
-            mCallback.taskFinished(result);
+        if (mCallbackReference != null) {
+            TaskCallback callback = mCallbackReference.get();
+            if (callback != null) {
+                callback.taskFinished(result);
+            }
         }
     }
 }

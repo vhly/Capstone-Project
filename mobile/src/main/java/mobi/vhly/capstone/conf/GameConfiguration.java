@@ -130,7 +130,7 @@ public final class GameConfiguration {
                         JSONObject json = new JSONObject(new String(data));
                         JSONObject jsonObject = json.getJSONObject("regions");
                         if (sRegions == null) {
-                            sRegions = new HashMap<>();
+                            sRegions = new HashMap<String, String>();
                         } else {
                             sRegions.clear();
                         }
@@ -143,7 +143,7 @@ public final class GameConfiguration {
                         jsonObject = json.getJSONObject("games");
 
                         if (sGameTypes == null) {
-                            sGameTypes = new TreeMap<>();
+                            sGameTypes = new TreeMap<String, String>();
                         } else {
                             sGameTypes.clear();
                         }
