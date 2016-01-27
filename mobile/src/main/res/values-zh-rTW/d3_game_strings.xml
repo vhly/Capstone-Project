@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="game_name_d3">暗黑破壞神III</string>
+
+    <string name="hero_name_witch_doctor">巫醫</string>
+    <string name="hero_name_monk">武僧</string>
+    <string name="hero_name_demon_hunter">狩魔獵人</string>
+    <string name="hero_name_wizard">秘術師</string>
+    <string name="hero_name_crusader">聖教軍</string>
+    <string name="hero_name_barbarian">野蠻人</string>
+
+</resources>

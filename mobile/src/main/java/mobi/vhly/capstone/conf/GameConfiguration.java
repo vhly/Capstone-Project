@@ -44,7 +44,6 @@ public final class GameConfiguration {
 
     private static GameConfiguration outInstance;
 
-
     public static GameConfiguration createInstance(Context context) {
         if (context == null) {
             throw new IllegalArgumentException("Context must not null");

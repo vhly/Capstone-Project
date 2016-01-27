@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="game_name_d3">디아블로 III</string>
+
+    <string name="hero_name_witch_doctor">부두술사</string>
+    <string name="hero_name_monk">수도사</string>
+    <string name="hero_name_demon_hunter">악마사냥꾼</string>
+    <string name="hero_name_wizard">마법사</string>
+    <string name="hero_name_crusader">성전사</string>
+    <string name="hero_name_barbarian">야만용사</string>
+
+</resources>

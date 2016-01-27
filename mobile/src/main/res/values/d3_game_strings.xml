@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="game_name_d3">Diablo III</string>
+
+    <string name="hero_name_witch_doctor">Witch Doctor</string>
+    <string name="hero_name_monk">Monk</string>
+    <string name="hero_name_demon_hunter">Demon Hunter</string>
+    <string name="hero_name_wizard">Wizard</string>
+    <string name="hero_name_crusader">Crusader</string>
+    <string name="hero_name_barbarian">Barbarian</string>
+
+</resources>

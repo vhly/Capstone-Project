@@ -6,6 +6,24 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/d3TextColor</item>
+    </style>
+
+
+    <style name="D3">
+
+    </style>
+
+    <style name="D3.Text">
+        <item name="android:textColor">@color/d3TextColor</item>
+    </style>
+
+    <style name="D3.Hero">
+
+    </style>
+
+    <style name="D3.Hero.Icon">
+        <item name="android:background">@drawable/shape_hero_icon_bg</item>
     </style>
 
 </resources>

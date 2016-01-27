@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="d3TextColor">#ad835a</color>
+    <color name="d3NormalBgColor">#000</color>
+
 </resources>
