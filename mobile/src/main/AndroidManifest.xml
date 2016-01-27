@@ -20,6 +20,10 @@
             android:name=".activities.AuthorizeActivity"
             android:label="@string/title_activity_authorize" >
         </activity>
+        <activity
+            android:name=".activities.HeroInfoActivity"
+            android:label="@string/title_activity_hero_info" >
+        </activity>
     </application>
 
 </manifest>

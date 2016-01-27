@@ -22,8 +22,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/item_hero_icon"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
             android:text="Hero Name"
             />
+
+    <TextView
+            android:id="@+id/item_hero_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_hero_name"
+            android:layout_alignLeft="@id/item_hero_name"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:text="Hero Type"
+            />
+
 
     <TextView
             android:id="@+id/item_hero_paragon_level"
@@ -41,7 +55,5 @@
             android:layout_marginRight="5dp"
             android:text="Level"
             />
-
-
 
 </RelativeLayout>

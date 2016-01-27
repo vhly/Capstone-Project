@@ -2,6 +2,7 @@ package mobi.vhly.capstone.conf;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import mobi.vhly.capstone.R;
 import mobi.vhly.capstone.commonlib.io.StreamUtil;
 import mobi.vhly.capstone.commonlib.preferences.ProtectedPreferences;
 import org.json.JSONException;
@@ -41,6 +42,8 @@ public final class GameConfiguration {
     public static String sApiKey = "";
     public static String sApiSecret = "";
 
+    public static HashMap<String, Integer> sHeroNames;
+
 
     private static GameConfiguration outInstance;
 
@@ -75,6 +78,41 @@ public final class GameConfiguration {
         loadFromPreferences();
 
         loadClientKey();
+
+        initHeroTypeNames();
+    }
+
+    public String getPreferenceString(String key) {
+        String ret = null;
+        if (key != null) {
+            if (mProtectedPreferences != null) {
+                ret = mProtectedPreferences.getString(key, null);
+            }
+        }
+        return ret;
+    }
+
+    public String getHeroTypeName(String type) {
+        String ret = "Error";
+
+        if (type != null) {
+            if (sHeroNames.containsKey(type)) {
+                int strId = sHeroNames.get(type);
+                ret = mContext.getString(strId);
+            }
+        }
+
+        return ret;
+    }
+
+    private void initHeroTypeNames() {
+        sHeroNames = new HashMap<String, Integer>();
+        sHeroNames.put("barbarian", R.string.hero_name_barbarian);
+        sHeroNames.put("crusader", R.string.hero_name_crusader);
+        sHeroNames.put("demon-hunter", R.string.hero_name_demon_hunter);
+        sHeroNames.put("monk", R.string.hero_name_monk);
+        sHeroNames.put("witch-doctor", R.string.hero_name_witch_doctor);
+        sHeroNames.put("wizard", R.string.hero_name_wizard);
     }
 
     /**

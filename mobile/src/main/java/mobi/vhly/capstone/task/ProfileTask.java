@@ -1,5 +1,6 @@
 package mobi.vhly.capstone.task;
 
+import mobi.vhly.capstone.Constants;
 import mobi.vhly.capstone.client.ClientAPI;
 import mobi.vhly.capstone.log.MyLog;
 import mobi.vhly.capstone.commonlib.task.BaseTask;
@@ -22,7 +23,7 @@ public class ProfileTask extends BaseTask {
     @Override
     protected TaskResult doInBackground(String... params) {
         TaskResult ret = new TaskResult();
-        ret.action = 1;
+        ret.action = Constants.TASK_ACTION_PROFILE;
         if (params != null && params.length > 0) {
             JSONObject object = ClientAPI.getProfile(params[0], null);
             if (object != null) {
