@@ -30,7 +30,9 @@ public final class GameConfiguration {
 
     public static String sCurrentApiPoint = "https://tw.api.battle.net/";
 
-    private static String sCurrentGameType = "d3";
+    public static String sCurrentAuthorizeApiPoint = "https://tw.battle.net/oauth/authorize";
+
+    public static String sCurrentGameType = "d3";
 
     private static HashMap<String, String> sRegions;
     private static TreeMap<String, String> sGameTypes;
@@ -38,6 +40,7 @@ public final class GameConfiguration {
 
     public static String sApiKey = "";
     public static String sApiSecret = "";
+
 
     private static GameConfiguration outInstance;
 
@@ -106,6 +109,8 @@ public final class GameConfiguration {
             sCurrentApiPoint = sRegions.get(sCurrentRegion);
 
             sCurrentGameType = mProtectedPreferences.getString(KEY_CURRENT_GAME, "d3");
+
+            sCurrentAuthorizeApiPoint = "https://" + sCurrentRegion + ".battle.net/oauth/authorize";
         }
     }
 

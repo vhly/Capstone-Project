@@ -7,4 +7,9 @@ package mobi.vhly.capstone.commonlib.task;
  * Email: vhly@163.com
  */
 public class TaskResult {
+    public int action;
+
+    public int state;
+
+    public Object data;
 }
